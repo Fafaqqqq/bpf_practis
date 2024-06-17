@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
         err(1, "failed to open and/or load BPF object\n");
 
     bpf_xdp_attach(2, -1, flags, NULL);
-    bpf_xdp_attach(2, bpf_program__fd(obj->progs.xdp_redirect_icmp_main), flags, NULL);
+    bpf_xdp_attach(2, bpf_program__fd(obj->progs.redirect_icmp), flags, NULL);
 
 cleanup:
     xdp_redirect_icmp_bpf__destroy(obj);
