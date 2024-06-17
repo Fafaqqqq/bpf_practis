@@ -1,0 +1,9 @@
+.build/
+app/bin
+run/
+.cache
+.vscode/
+
+compile_commands.json
+
+*user.h
